@@ -1,0 +1,125 @@
+body {
+    background-color: rgb(42, 39, 39);
+    margin: 0;
+    margin-top: 240px;
+    margin-left: 240px;
+}
+
+.pacman {
+    width: 236px;
+    height: 203px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: pacmanAnimation 1s steps(4) infinite;
+}
+
+@keyframes pacmanAnimation {
+    0% {
+        background-image: url('/img/pacman1.png');
+    }
+
+    25% {
+        background-image: url('/img/pacman2.png');
+    }
+
+    50% {
+        background-image: url('/img/pacman3.png');
+    }
+
+    75% {
+        background-image: url('/img/pacman4.png');
+    }
+
+    100% {
+        background-image: url('/img/pacman1.png');
+    }
+}
+
+.dots {
+    gap: 70px;
+    display: flex;
+    top: 49%;
+    left: 448px;
+    animation-name: dots;
+    animation-duration: 0.8s;
+    position: absolute;
+}
+
+@keyframes dots {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+}
+
+.dot {
+    width: 43px;
+    height: 43px;
+    background: #fff;
+    border-radius: 50%;
+    transition: opacity 0.2s ease-out;
+    animation: moveToPacman 2s linear infinite, fadeDots 1s;
+}
+
+@keyframes moveToPacman {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeDots {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.dot-1 {
+    animation-delay: 1s;
+}
+
+.dot-2 {
+    animation-delay: 1.5s;
+}
+
+.dot-3 {
+    animation-delay: 2s;
+}
+
+.dot-4 {
+    animation-delay: 2.5s;
+}
+
+.dot-5 {
+    animation-delay: 3s;
+}
+
+.dot-6 {
+    animation-delay: 3.5s;
+}
+
+.dot-7 {
+    animation-delay: 4s;
+}
+
+.dot-8 {
+    animation-delay: 4.5s;
+}
